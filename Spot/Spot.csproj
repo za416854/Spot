@@ -1,0 +1,142 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\IndexImages\amsterdam3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GemBox.Spreadsheet" Version="47.0.1345" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\20211122\testCharts\.vs\testCharts\config\applicationhost.config" />
+    <None Include="wwwroot\images\20211122\testCharts\testCharts.sln" />
+    <None Include="wwwroot\images\20211122\testCharts\testCharts\Part2\jQueryValidation\.vs\jQueryValidation\config\applicationhost.config" />
+    <None Include="wwwroot\images\20211122\testCharts\testCharts\Part2\jQueryValidation\.vs\jQueryValidation\v16\.suo" />
+    <None Include="wwwroot\images\20211122\testCharts\testCharts\Part2\jQueryValidation\.vs\jQueryValidation\v16\Server\sqlite3\db.lock" />
+    <None Include="wwwroot\images\20211122\testCharts\testCharts\Part2\jQueryValidation\.vs\jQueryValidation\v16\Server\sqlite3\storage.ide" />
+    <None Include="wwwroot\images\20211122\testCharts\testCharts\Part2\jQueryValidation\jQueryValidation.sln" />
+    <None Include="wwwroot\images\IndexImages\amsterdam3.jpg" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\.gitignore" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\build.sh" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\converter\converter.py" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\converter\processor.py" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\converter\simplifier.py" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\jquery-jvectormap.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\lib\jquery-mousewheel.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\LICENSE-AGPL" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\LICENSE-COMMERCIAL" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\README.md" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\abstract-canvas-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\abstract-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\abstract-shape-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\color-scale.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\data-series.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\jvectormap.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\legend.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\map-object.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\map.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\marker.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\multimap.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\numeric-scale.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\ordinal-scale.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\proj.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\region.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\simple-scale.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\svg-canvas-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\svg-circle-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\svg-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\svg-group-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\svg-image-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\svg-path-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\svg-shape-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\svg-text-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\vector-canvas.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\vml-canvas-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\vml-circle-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\vml-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\vml-group-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\vml-image-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\vml-path-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\src\vml-shape-element.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\jquery-1.8.2.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\jquery-jvectormap-data-us-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\jquery-jvectormap-map.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\jquery-jvectormap-us-aea-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\jquery-jvectormap-us-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\jquery-jvectormap-us-merc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\jquery-jvectormap-us-mill-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\jquery-jvectormap-world-mill-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ak-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-al-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ar-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-az-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ca-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-co-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ct-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-dc-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-de-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-fl-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ga-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-hi-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ia-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-id-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-il-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-in-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ks-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ky-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-la-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ma-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-md-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-me-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-mi-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-mn-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-mo-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ms-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-mt-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-nc-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-nd-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ne-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-nh-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-nj-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-nm-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-nv-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ny-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-oh-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ok-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-or-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-pa-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ri-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-sc-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-sd-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-tn-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-tx-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-ut-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-va-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-vt-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-wa-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-wi-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-wv-lcc-en.js" />
+    <None Include="wwwroot\vendors\bjornd-jvectormap-1a905c8\tests\assets\us\jquery-jvectormap-data-us-wy-lcc-en.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\20211122\testCharts\.vs\testCharts\v16\" />
+    <Folder Include="wwwroot\images\20211122\testCharts\testCharts\App_Code\" />
+    <Folder Include="wwwroot\images\20211122\testCharts\testCharts\Part2\jQueryValidation\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\" />
+  </ItemGroup>
+
+</Project>

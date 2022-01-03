@@ -1,0 +1,76 @@
+﻿@model Spot.Models.Account
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Account</h4>
+<hr />
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 ">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="badge badge-outline-secondary" style="font-size: xx-large">Edit System</h4>
+                    <br />
+                    <hr />
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-sample">
+                            <p class="card-description" style="font-size: x-large">
+                                Database Of Place
+                            </p>
+                            <br /> <br />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="UserName" class="col-sm-2 col-form-label">    </label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="UserName" class="form-control" />
+                                            <span asp-validation-for="UserName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="Password" class="col-sm-2 col-form-label"></label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="Password" class="form-control" />
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr />
+                            <br />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <div class="col-sm-9">
+                                            <input type="submit" value="Save" class="btn btn-primary" />
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                            <input type="submit" asp-action="Index" asp-controller="Accounts" class="btn btn-danger" value="Back" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

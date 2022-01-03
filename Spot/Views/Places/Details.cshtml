@@ -1,0 +1,53 @@
+﻿@model Spot.Models.Place
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="col-lg-12 posts-list">
+    <div class="single-post">
+        <div class="feature-img">
+            <img src="~/images/IndexImages/@Html.DisplayFor(model => model.Photo)" />
+            @*<img src="~/images/IndexImages/london3.jpg" />*@<br /><br />
+        </div>
+        <div class="blog_details">
+            <h2 class="btn-reply text-uppercase">
+                @Html.DisplayFor(model => model.City),&ensp;@Html.DisplayFor(model => model.Nation)
+            </h2>
+            <ul class="blog-info-link mt-3 mb-4">
+                <li><h4>@Html.DisplayNameFor(model => model.Language): @Html.DisplayFor(model => model.Language)</h4></li>
+                <li><h4>Features: @Html.DisplayFor(model => model.Feature)</h4></li>
+                <li><h4>@Html.DisplayNameFor(model => model.Currency): @Html.DisplayFor(model => model.Currency)</h4></li>
+                <li><h4>Travel Budget: Around @Html.DisplayFor(model => model.Budget)</h4></li>
+            </ul>
+            <hr />
+            <div class="quote-wrapper">
+                <div class="quotes">
+                    <h3 class="">Introduction:</h3><br />
+                    <h4>
+                        @Html.DisplayFor(model => model.Introduction)
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div><br /><br /><br />
+    <a class="btn btn-facebook" asp-action="More" asp-controller="Places">Back To More</a>
+    @*<a class="btn btn-success btn-fw justify-content-lg-start" asp-action="Budget" asp-controller="Places">Budget</a>*@
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

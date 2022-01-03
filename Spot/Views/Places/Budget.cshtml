@@ -1,0 +1,99 @@
+﻿@*@model IEnumerable<Spot.Models.Place>*@
+@model Spot.Models.Place
+@{
+    ViewData["Title"] = "Budget";
+}
+<h1>Budget Calculator</h1>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 grid-margin">
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Find the best trip according to your <code>budget</code> and click the button of cards for furthur information</h4>
+                                            @* <p class="card-description">Find the best trip according to your <code>budget</code> and click the button od card for furthur information</p>*@
+                                            <div class="mt-5 pt-4 w-75 mx-auto">
+                                                <div id="soft-limit-2" class="ul-slider slider-success mb-5 mt-5"></div>
+                                            </div>
+                                            <input id="test" class="btn btn-success" type="button" name="name" value="點擊獲得資訊" /><br /><hr /><ul id="list" class="row"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles{
+    <link href="~/vendors/nouislider/nouislider.min.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="~/vendors/nouislider/nouislider.min.js"></script>
+    @*<script src="~/js/no-ui-slider.js"></script>*@
+    <script>
+        (function ($) {
+            'use strict';
+            if ($("#soft-limit-2").length) {
+                var softSlider = document.getElementById('soft-limit-2');
+
+                noUiSlider.create(softSlider, {
+                    type: "interge",
+                    start: [0, 10000],
+                    tooltips: [true, true],
+                    connect: true,
+                    range: {
+                        min: 0,
+                        max: 50000
+                    },
+                    pips: {
+                        mode: 'values',
+                        values: [0, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000],
+                        density: 5000
+                    }
+                });
+            }
+        })(jQuery);
+
+        //$(function () {
+        //    $("#test").click(function () {
+        //        var first = parseInt($(".noUi-tooltip:first").text());
+        //        alert(first);
+        //        var last = parseInt($(".noUi-tooltip:last").text());
+        //        alert(last);
+        //    });
+
+
+        //});
+
+    </script>
+    <script>
+    async function getbytype() {
+        $("#list").empty();
+        var response = await fetch(`@Url.Content("~/api/PlacesCompare")/${parseInt($(".noUi-tooltip:last").text())}`)
+        var result = await response.json();
+        console.log(result); //Array
+        result.forEach(item => {
+            $("#list").append(
+                $('<div class="card-deck col-3 mr-1 mb-3">').html(`<br /><br /><br /> 
+                    <img class="card-img-top" src="/images/IndexImages/${item.photo}" />
+                    <div class="card-body text-white">
+                        <h3 class="card-title">${item.city} <br /></h3>
+                        <p class="card-text">${item.nation} <br />  ${item.feature} <br /> ${item.language} <br /> ${item.currency} <br /> NT:${item.budget}元</p>
+                        <br />
+                        <a href="/Places/Details/${item.id}" class="btn btn-outline-danger btn-fw"> 了解更多 </a>
+            </div> <br />`)
+            );
+        });
+    };
+        $("#test").click(getbytype);
+    </script>
+}

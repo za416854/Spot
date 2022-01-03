@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewData["Title"] = "Test1";
+}
+
+<h1>Test1</h1>
+
+<style>
+    html, * {
+        font-family: 'Quicksand';
+    }
+
+    body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, td, textarea, th, ul {
+        font-family: Microsoft JhengHei UI Light;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #fafafa;
+    }
+
+    .demo {
+        margin: 40px auto;
+        max-width: 960px;
+    }
+
+    h2 {
+        font-size: 1.125rem;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .demo .toutiao {
+        width: 400px;
+        height: 150px;
+        overflow: hidden;
+        margin: 20px 10px;
+    }
+
+        .demo .toutiao ul {
+            width: 400px
+        }
+
+            .demo .toutiao ul li {
+                width: 400px;
+                height: 50px
+            }
+
+        .demo .toutiao p {
+            width: 400px;
+            height: 50px;
+            overflow: hidden
+        }
+
+        .demo .toutiao a {
+            text-decoration: none;
+            font-family: Microsoft JhengHei UI Light;
+            font-size: 1.125em;
+            color: #111
+        }
+
+            .demo .toutiao a:hover {
+                color: #aaa
+            }
+
+                .demo .toutiao a:hover i {
+                    color: #ddd
+                }
+
+        .demo .toutiao i {
+            margin-right: 8px;
+            color: #999
+        }
+</style><script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="~/js/jquery-vertical-loop.js"></script>
+<div class="demo">
+
+    <h2>上滾動範例</h2>
+    <div class="toutiao demo1" style="height: 50px">
+        <ul class="clearfix">
+            <li><p><i class="far fa-bell"></i> <a href="#">這是往上滾動的跑馬燈文字公告範例</a> <i class="fas fa-angle-up"></i></p></li>
+            <li><p><i class="far fa-bell"></i> <a href="#">可以自行設定要顯示的區塊高度</a></p></li>
+            <li><p><i class="far fa-bell"></i> <a href="#">也可以設定顯示文字的寬度</a></p></li>
+            <li><p><i class="far fa-bell"></i> <a href="#">當滑鼠移至文字時會停止滑動</a></p></li>
+            <li><p><i class="far fa-bell"></i> <a href="#">修改內容之後就可以當作首頁公告使用</a></p></li>
+        </ul>
+    </div>
+
+    <h2>下滾動範例</h2>
+    <div class="toutiao demo2" style="height: 50px">
+        <ul class="clearfix">
+            <li><p><i class="far fa-bell"></i> <a href="#">這是往下滾動的跑馬燈文字公告範例</a> <i class="fas fa-angle-down"></i></p></li>
+            <li><p><i class="far fa-bell"></i> <a href="#">修改內容之後就可以當作首頁公告使用</a></p></li>
+            <li><p><i class="far fa-bell"></i> <a href="#">當滑鼠移至文字時會停止滑動</a></p></li>
+            <li><p><i class="far fa-bell"></i> <a href="#">也可以設定顯示文字的寬度</a></p></li>
+            <li><p><i class="far fa-bell"></i> <a href="#">可以自行設定要顯示的區塊高度</a></p></li>
+
+        </ul>
+    </div>
+</div>
+<script>
+
+    $('.demo1').verticalLoop({
+        delay: 3000,
+        order: 'asc'
+    });
+
+    setTimeout(function () {
+        //$('.demo1').verticalLoop('autoPause');
+    }, 10 * 1000);
+
+
+    var verticalLoop = new VerticalLoop('.demo2', {
+        delay: 3000,
+        order: 'desc',
+        oninitend: function (res) {
+            console.log(res);
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-167622866-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>

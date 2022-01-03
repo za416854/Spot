@@ -1,0 +1,73 @@
+﻿@model Spot.Models.Account
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 ">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="badge badge-outline-secondary" style="font-size: xx-large">Details System</h4>
+                    <br />
+                    <hr />
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-sample">
+                            <p class="card-description" style="font-size: x-large">
+                                Database Of Place
+                            </p>
+                            <br /> <br />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="UserName" class="col-sm-2 col-form-label">    </label>
+                                        <div class="col-sm-9">
+                                            <h3 class="col-sm-10">
+                                                @Html.DisplayFor(model => model.UserName)
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="Password" class="col-sm-2 col-form-label"></label>
+                                        <div class="col-sm-9">
+                                            <h3 class="col-sm-10">
+                                                @Html.DisplayFor(model => model.Password)
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr />
+                            <br />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <div class="col-sm-9">
+                                            <a asp-action="Edit" asp-route-id="@Model.Id" type="submit" value="Save" class="btn btn-primary">Edit</a>
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                            <a type="submit" asp-action="Index" asp-controller="Accounts" class="btn btn-danger" value="Back">Back</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+

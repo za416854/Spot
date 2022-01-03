@@ -1,0 +1,403 @@
+﻿@model IEnumerable<Spot.Models.Place>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    
+    .demo {
+        margin: 4px auto;
+        max-width: 750px;
+    }
+    .demo .toutiao {
+        width: 800px;
+        height: 150px;
+        overflow: hidden;
+        margin: 0px 100px;
+    }
+
+        .demo .toutiao ul {
+           list-style: none;
+        }
+
+        .demo .toutiao p {
+            width: 500px;
+            height: 50px;
+            overflow: hidden;
+             color: red
+        }
+
+            .demo .toutiao a:hover {
+                color: #aaa
+            }
+
+            #aaa{
+                background-color:none !important;
+            }
+</style>
+<div class="text-center">
+    <div class="demo">
+        <div class="toutiao demo1 container" style="height: 50px">
+            <ul class="container">
+                <li><p><i class="fa fa-pencil "></i>On 16 December, France banned British tourists because of the rise in Omicron cases in the UK.<i class="fas fa-angle-up"></i></p></li>
+                <li><p><i class="fa fa-pencil "></i>COVID-19 cases in Europe and the second highest in the world, 436,870 - in the last seven days.<i class="fas fa-angle-up"></i></p></li>
+                <li><p><i class="fa fa-pencil "></i>Germany is introducing new measures to curb the spread of COVID-19...<i class="fas fa-angle-up"></i></p></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 grid-margin container stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    @*<h1 class="card-title">Good Fundation will set your life free!</h1>*@
+                    <div class="owl-carousel owl-theme full-width">
+                        <div class="item">
+                            <div class="card text-white">
+                                <img src="~/images/IndexImages/london.jpg" />
+                                <div class="card-img-overlay d-flex">
+                                    <div class="mt-auto text-center w-100">
+                                        <h3>London - United Kingdom</h3>
+                                        @*<h3 style="color: #000000; font-style: italic" class="card-text mb-4 font-weight-normal">I never attempt to make money on the stock market. I buy on the assumption that they could close the market the next day and not reopen it for five years. By Warren Buffett</h3>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card text-white">
+                                <img src="~/images/IndexImages/amsterdam.jpg" />
+                                <div class="card-img-overlay d-flex">
+                                    <div class="mt-auto text-center w-100">
+                                        <h3>Amsterdam - the Netherlands</h3>
+                                        @*<h3 style="color: #000000; font-style: italic" class="card-text mb-4 font-weight-normal">Look at market fluctuations as your friend rather than your enemy; profit from folly rather than participate in it.  By Warren Buffett</h3>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card text-white">
+                                <img src="~/images/IndexImages/paris.jpg" />
+                                <div class="card-img-overlay d-flex">
+                                    <div class="mt-auto text-center w-100">
+                                        <h3>Paris - France</h3>
+                                        @*<h3 style="font-style: italic" class="card-text mb-4 font-weight-normal">Look at market fluctuations as your friend rather than your enemy, profit from folly rather than participate in it.  By Warren Buffett</h3>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card text-white">
+                                <img src="~/images/IndexImages/zurich.jpg" />
+                                <div class="card-img-overlay d-flex">
+                                    <div class="mt-auto text-center w-100">
+                                        <h3>Zurich - Switzerland</h3>
+                                        @*<h3 style="font-style: italic" class="card-text mb-4 font-weight-normal">Look at market fluctuations as your friend rather than your enemy, profit from folly rather than participate in it.  By Warren Buffett</h3>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card text-white">
+                                <img src="~/images/IndexImages/berlin.jpg" />
+                                <div class="card-img-overlay d-flex">
+                                    <div class="mt-auto text-center w-100">
+                                        <h3>Berlin - Germany</h3>
+                                        @*<h3 style="font-style: italic" class="card-text mb-4 font-weight-normal">Look at market fluctuations as your friend rather than your enemy, profit from folly rather than participate in it.  By Warren Buffett</h3>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div class="row">*@
+            @*<div class="col-md-12 grid-margin">*@
+                <div id="aaa" class="card bg-gradient-info border-0 position-relative" style="padding:15px">
+                    @*<div class="card-body">*@
+                        <h2 style="color:crimson">Instant Weather Information</h2><br /><hr />
+                        <div id="performanceOverview" class="carousel slide performance-overview-carousel position-static pt-2" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div id="londonWeather" style="color:antiquewhite" class="col-md-4 item">
+
+                                        </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                        <div id="newyorkWeather" style="color:antiquewhite" class="col-md-4 item">
+
+                                        </div>
+                                        <div id="tokyoWeather" style="color:antiquewhite" class="col-md-4 item">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div id="taipeiWeather" style="color:antiquewhite" class="col-md-4 item">
+
+                                        </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                        <div id="perthWeather" style="color:antiquewhite" class="col-md-4 item">
+
+                                        </div>
+                                        <div id="seatleWeather" style="color:antiquewhite" class="col-md-4 item">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#performanceOverview" role="button" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#performanceOverview" role="button" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    @*</div>*@
+                </div>
+            @*</div>*@
+        @*</div>*@<br /><hr />
+        <iframe style="width:100%" height="600" src="https://embed.windy.com/embed2.html?lat=47.828&lon=-123.135&detailLat=47.828&detailLon=-123.135&width=650&height=450&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="1"></iframe>
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /><br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /><br /> <hr />
+        <div class="container">
+            <div class="card-deck">
+                <div class="card border-success">
+                    <img class="card-img-top" src="~/images/IndexImages/london2.jpg" />
+                    <div class="card-body text-white">
+                        <h3 class="card-title">倫敦</h3>
+                        <p class="card-text">倫敦，是英國首都，也是英國最大都市、以及其構成國英格蘭的首府。位於泰晤士河流域，於公元50年由羅馬人建立，取名為倫蒂尼恩...</p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <a asp-controller="Places" asp-action="LondonIntro" class="btn btn-outline-danger btn-fw"> 了解更多 </a>
+                    </div>
+                </div>
+                <div class="card border-success">
+                    <img class="card-img-top" src="~/images/IndexImages/newyork.jpg" />
+                    <div class="card-body text-white">
+                        <h3 class="card-title">紐約</h3>
+                        <p class="card-text">
+                            紐約，暱稱「大蘋果」，是美國人口最多的城市、以及世界最大的城市之一，是對全球的經濟、商業、金融、媒體、政治、教育和娛樂具有極大影響力的國際大都會...
+                        </p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <a asp-controller="Places" asp-action="NewyorkIntro" class="btn btn-outline-danger btn-fw"> 了解更多 </a>
+                    </div>
+                </div>
+                <div class="card border-success">
+                    <img class="card-img-top" src="~/images/IndexImages/amsterdam3.jpg" />
+                    <div class="card-body text-white">
+                        <h3 class="card-title">阿姆斯特丹</h3>
+                        <p class="card-text">
+                            阿姆斯特丹，是荷蘭首都及最大城市，位於該國西部省份北荷蘭省。根據2008年1月的統計數據，這座城市人口達747,290人；而該城市所處的蘭...
+                        </p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br /> <a asp-controller="Places" asp-action="AmsterdamIntro" class="btn btn-outline-danger btn-fw"> 了解更多 </a>
+                    </div>
+                </div>
+                <div class="card border-success">
+                    <img class="card-img-top" src="~/images/IndexImages/madrid.jpg" />
+                    <div class="card-body text-white">
+                        <h3 class="card-title">馬德里</h3>
+                        <p class="card-text">
+                            馬德里是西班牙首都及最大都市，也是馬德里自治區首府，其位置處於西班牙國土中部，曼薩納雷斯河貫穿市區。市內人口約340萬，都會區人口則約627.1萬（2010年），均...
+                        </p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <a asp-controller="Places" asp-action="MadridIntro" class="btn btn-outline-danger btn-fw"> 了解更多 </a>
+                    </div>
+                </div>
+            </div> <br />
+            <br />
+            <a class="btn btn-outline-primary btn-fw justify-content-lg-start" asp-action="More" asp-controller="Places">查看更多...</a>
+            @*<a class="btn btn-outline-success btn-fw justify-content-lg-start" asp-action="Budget" asp-controller="Places">預算</a>*@
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+
+    </div>
+
+</div>
+
+@section Styles{
+    <link href="~/vendors/owl-carousel-2/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/vendors/owl-carousel-2/owl.theme.default.min.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="~/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="~/js/owl-carousel.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="~/js/jquery-vertical-loop.js"></script>
+    <script>
+        function makeRequest() {
+            xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                // 這邊處理傳回來的東西
+                var response = JSON.parse(this.responseText);
+                console.log(response);
+                var city = response.city.name + ", " + response.city.country;
+                var weatherTitle = response.list[0].weather[0].main;
+                var temp = response.list[0].main.temp + "°";
+                var weatherContainer = document.querySelector('#londonWeather');
+                weatherContainer.innerHTML = '<h3 class="mb-0">' + "" + city + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Weather : " + weatherTitle + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Temperature : " + temp + "C" + "</h3>";
+
+            }
+            xhr.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?q=London,UK?id=524901&APPID=d6d13762809cac30261e6659f5c23872&units=metric', true)
+            xhr.send()
+        }
+        makeRequest();
+    </script>
+    <script>
+        function makeRequest() {
+            xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                // 這邊處理傳回來的東西
+                var response = JSON.parse(this.responseText);
+                console.log(response);
+                var city = response.city.name + ", " + response.city.country;
+                var weatherTitle = response.list[0].weather[0].main;
+                var temp = response.list[0].main.temp + "°";
+                var weatherContainer = document.querySelector('#newyorkWeather');
+                weatherContainer.innerHTML = '<h3 class="mb-0">' + "" + city + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Weather : " + weatherTitle + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Temperature : " + temp + "C" + "</h3>";
+            }
+            xhr.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?q=chicago,?id=524901&APPID=d6d13762809cac30261e6659f5c23872&units=metric', true)
+            xhr.send()
+        }
+        makeRequest();
+    </script>
+    <script>
+        function makeRequest() {
+            xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                // 這邊處理傳回來的東西
+                var response = JSON.parse(this.responseText);
+                console.log(response);
+                var city = response.city.name + ", " + response.city.country;
+                var weatherTitle = response.list[0].weather[0].main;
+                var temp = response.list[0].main.temp + "°";
+                var weatherContainer = document.querySelector('#tokyoWeather');
+                weatherContainer.innerHTML = '<h3 class="mb-0">' + "" + city + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Weather : " + weatherTitle + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Temperature : " + temp + "C" + "</h3>";
+            }
+            xhr.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?q=tokyo,?id=524901&APPID=d6d13762809cac30261e6659f5c23872&units=metric', true)
+            xhr.send()
+        }
+        makeRequest();
+    </script>
+    <script>
+        function makeRequest() {
+            xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                // 這邊處理傳回來的東西
+                var response = JSON.parse(this.responseText);
+                console.log(response);
+                var city = response.city.name + ", " + response.city.country;
+                var weatherTitle = response.list[0].weather[0].main;
+                var temp = response.list[0].main.temp + "°";
+                var weatherContainer = document.querySelector('#taipeiWeather');
+                weatherContainer.innerHTML = '<h3 class="mb-0">' + "" + city + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Weather : " + weatherTitle + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Temperature : " + temp + "C" + "</h3>";
+            }
+            xhr.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?q=taipei,?id=524901&APPID=d6d13762809cac30261e6659f5c23872&units=metric', true)
+            xhr.send()
+        }
+        makeRequest();
+    </script>
+    <script>
+        function makeRequest() {
+            xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                // 這邊處理傳回來的東西
+                var response = JSON.parse(this.responseText);
+                console.log(response);
+                var city = response.city.name + ", " + response.city.country;
+                var weatherTitle = response.list[0].weather[0].main;
+                var temp = response.list[0].main.temp + "°";
+                var weatherContainer = document.querySelector('#perthWeather');
+                weatherContainer.innerHTML = '<h3 class="mb-0">' + "" + city + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Weather : " + weatherTitle + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Temperature : " + temp + "C" + "</h3>";
+            }
+            xhr.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?q=perth,?id=524901&APPID=d6d13762809cac30261e6659f5c23872&units=metric', true)
+            xhr.send()
+        }
+        makeRequest();
+    </script>
+    <script>
+        function makeRequest() {
+            xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                // 這邊處理傳回來的東西
+                var response = JSON.parse(this.responseText);
+                console.log(response);
+                var city = response.city.name + ", " + response.city.country;
+                var weatherTitle = response.list[0].weather[0].main;
+                var temp = response.list[0].main.temp + "°";
+                var weatherContainer = document.querySelector('#seatleWeather');
+                weatherContainer.innerHTML = '<h3 class="mb-0">' + "" + city + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Weather : " + weatherTitle + "</h3>" + "<br/>" + '<h3 class="mb-0">' + "Temperature : " + temp + "C" + "</h3>";
+            }
+            xhr.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?q=seattle,?id=524901&APPID=d6d13762809cac30261e6659f5c23872&units=metric', true)
+            xhr.send()
+        }
+        makeRequest();
+    </script>
+    <script>
+
+        $('.demo1').verticalLoop({
+            delay: 3000,
+            order: 'asc'
+        });
+
+        setTimeout(function () {
+            //$('.demo1').verticalLoop('autoPause');
+        }, 10 * 1000);
+
+
+        var verticalLoop = new VerticalLoop('.demo2', {
+            delay: 2000,
+            order: 'desc',
+            oninitend: function (res) {
+                console.log(res);
+            }
+        });
+
+    </script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-167622866-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+}
+
+

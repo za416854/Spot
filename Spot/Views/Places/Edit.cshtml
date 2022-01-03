@@ -1,0 +1,160 @@
+﻿@model Spot.Models.Place
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 ">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="badge badge-outline-secondary" style="font-size: xx-large">Edit System</h4>
+                    <br />
+                    <hr />
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-sample">
+                            <p class="card-description" style="font-size: x-large">
+                                Database Of Place
+                            </p>
+                            <br /> <br />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="Nation" class="col-sm-2 col-form-label">    </label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="Nation" class="form-control" />
+                                            <span asp-validation-for="Nation" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="City" class="col-sm-2 col-form-label"></label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="City" class="form-control" />
+                                            <span asp-validation-for="City" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="Feature" class="col-sm-2 col-form-label"></label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="Feature" class="form-control" />
+                                            <span asp-validation-for="Feature" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="Photo" class="col-sm-2 col-form-label">Photo</label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="Photo" class="form-control" />
+                                            <span asp-validation-for="Photo" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="Language" class="col-sm-2 col-form-label"></label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="Language" class="form-control" />
+                                            <span asp-validation-for="Language" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="Currency" class="col-sm-2 col-form-label"></label>
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input asp-for="Currency" class="form-control" />
+                                                <span asp-validation-for="Currency" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="Budget" class="col-sm-2 col-form-label"></label>
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input asp-for="Budget" class="form-control" />
+                                                <span asp-validation-for="Budget" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-description"></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label asp-for="Introduction" class="col-sm-2 col-form-label">Introduction</label>
+                                        <div class="col-sm-9">
+                                            <textarea asp-for="Introduction" rows="8" class="form-control"></textarea>
+                                            <span asp-validation-for="Introduction" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <br />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <div class="col-sm-9">
+                                            <input type="submit" value="Save" class="btn btn-primary" /> |
+                                            <input type="submit" asp-action="Index" asp-controller="Places" class="btn btn-danger" value="Back" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @*<script>
+    $(function () {
+    $("#btn2").click(function () {
+
+    var myData = {
+    a: $("#txt1").val(), //去找txt1拿
+    b: $("#txt2").val()  //去找txt2拿
+    };
+
+    $.ajax({
+    type: 'GET',
+    url: '@Url.Action("Compute2")',
+    data: myData,
+    success: function (result) {
+    $("#div1").html(`<h1>${result}</h1>`);
+
+    }
+    });
+
+    });
+    });
+    </script>*@
+}

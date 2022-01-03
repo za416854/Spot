@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @*<title>@ViewData["Title"] - FundsInfo</title>*@
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link href="/css/horizontal-layout-dark/style.css" rel="stylesheet" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/favicon.png" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_horizontal-navbar.html -->
+        <div class="horizontal-menu">
+            <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+                <div class="container">
+                    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                        <a class="navbar-brand brand-logo" asp-controller="Home" asp-action="index"><img src="../../images/Logo.png" alt="logo" /></a>
+                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../images/logo-mini.svg" alt="logo" /></a>
+                    </div>
+                    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                        <ul class="navbar-nav mr-lg-2">
+                            <li class="nav-item nav-search d-none d-lg-block">
+                                
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav navbar-nav-right">
+                            @*<li class="nav-item dropdown me-1">
+                                    <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-bs-toggle="dropdown">
+                                        <i class="ti-email mx-0"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                                        <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+                                        <a class="dropdown-item preview-item">
+                                            <div class="preview-thumbnail">
+                                                <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
+                                            </div>
+                                            <div class="preview-item-content flex-grow">
+                                                <h6 class="preview-subject ellipsis font-weight-normal">
+                                                    David Grey
+                                                </h6>
+                                                <p class="font-weight-light small-text text-muted mb-0">
+                                                    The meeting is cancelled
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item preview-item">
+                                            <div class="preview-thumbnail">
+                                                <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
+                                            </div>
+                                            <div class="preview-item-content flex-grow">
+                                                <h6 class="preview-subject ellipsis font-weight-normal">
+                                                    Tim Cook
+                                                </h6>
+                                                <p class="font-weight-light small-text text-muted mb-0">
+                                                    New product launch
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item preview-item">
+                                            <div class="preview-thumbnail">
+                                                <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
+                                            </div>
+                                            <div class="preview-item-content flex-grow">
+                                                <h6 class="preview-subject ellipsis font-weight-normal">
+                                                    Johnson
+                                                </h6>
+                                                <p class="font-weight-light small-text text-muted mb-0">
+                                                    Upcoming board meeting
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>*@
+                            @*<li class="nav-item dropdown">
+                                    <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+                                        <i class="ti-bell mx-0"></i>
+                                        <span class="count"></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                                        <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+                                        <a class="dropdown-item preview-item">
+                                            <div class="preview-thumbnail">
+                                                <div class="preview-icon bg-success">
+                                                    <i class="ti-info-alt mx-0"></i>
+                                                </div>
+                                            </div>
+                                            <div class="preview-item-content">
+                                                <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                                                <p class="font-weight-light small-text mb-0 text-muted">
+                                                    Just now
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item preview-item">
+                                            <div class="preview-thumbnail">
+                                                <div class="preview-icon bg-warning">
+                                                    <i class="ti-settings mx-0"></i>
+                                                </div>
+                                            </div>
+                                            <div class="preview-item-content">
+                                                <h6 class="preview-subject font-weight-normal">Settings</h6>
+                                                <p class="font-weight-light small-text mb-0 text-muted">
+                                                    Private message
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item preview-item">
+                                            <div class="preview-thumbnail">
+                                                <div class="preview-icon bg-info">
+                                                    <i class="ti-user mx-0"></i>
+                                                </div>
+                                            </div>
+                                            <div class="preview-item-content">
+                                                <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                                                <p class="font-weight-light small-text mb-0 text-muted">
+                                                    2 days ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>*@
+
+                            @if (ViewBag.IsLogin)
+                            {
+                                <li class="nav-item nav-profile dropdown">
+                                    <a class="nav-link" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+                                        <img src="~/images/IndexImages/seed.jpg" alt="profile" />
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                                        <div class="container" style="color: #e0732b">Welcome back, @ViewBag.UserName </div>
+                                        <a class="dropdown-item" asp-controller="Home" asp-action="Logout"> <i class="ti-power-off text-primary"></i>登出</a>
+                                    </div>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item nav-profile dropdown">
+                                    <a class="nav-link" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+                                        <img src="https://via.placeholder.com/40x40" alt="profile" />
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                                        <p style="color: #FF0000">@ViewBag.UserName您好</p>
+
+                                        <a class="dropdown-item" asp-controller="Home" asp-action="Login"> <i class="ti-power-off text-primary"></i>登入</a>
+                                    </div>
+                                </li>
+                            }
+
+
+                        </ul>
+                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+                            <span class="ti-menu"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <nav class="bottom-navbar">
+                <div class="container">
+                    <ul class="nav page-navigation">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home">
+                                <i class="ti-home menu-icon"></i>
+                                <span class="menu-title">MainPage</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Places/Budget">
+                                <i class="ti-money menu-icon"></i>
+                                <span class="menu-title">Budget Measure</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Places/Test">
+                                <i class="ti-map-alt menu-icon"></i>
+                                <span class="menu-title">Map Navigator</span>
+                            </a>
+                        </li>
+                        @if (ViewBag.IsLogin)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Places">
+                                    <i class="ti-map menu-icon"></i>
+                                    <span class="menu-title">Places Management</span>
+                                </a>
+                            </li>
+                        }
+                        @if (ViewBag.IsLogin)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Places/Create">
+                                    <i class="ti-pencil menu-icon"></i>
+                                    <span class="menu-title">Add Places</span>
+                                </a>
+                            </li>
+                        }
+                        @if (ViewBag.IsLogin && @ViewBag.UserName == "123")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Accounts">
+                                    <i class="ti-settings menu-icon"></i>
+                                    <span class="menu-title">Accounts Management</span>
+                                </a>
+                            </li>
+                        }
+                        @if (ViewBag.IsLogin && @ViewBag.UserName == "123")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Accounts/Create">
+                                    <i class="ti-pencil menu-icon"></i>
+                                    <span class="menu-title">Add Accounts</span>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="container">
+                        <main role="main" class="pb-3">
+                            @RenderBody()
+                        </main>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="border-top footer text-muted">
+                    <div class="container">
+                        &copy; 2021 - TravelInfo - <a asp-area="" asp-controller="Home" asp-action="index">Home</a>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../../vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/hoverable-collapse.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/settings.js"></script>
+    <script src="../../js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../../js/dashboard.js"></script>
+    <script src="../../js/todolist.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <!-- End custom js for this page-->
+</body>
+@await RenderSectionAsync("Scripts", required: false)
+
+</html>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+

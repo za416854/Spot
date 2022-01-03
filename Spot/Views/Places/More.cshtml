@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Spot.Models.Place>
+
+@{
+    ViewData["Title"] = "More";
+}
+
+
+
+<p>
+    @*<a asp-action="Create">Create New</a>*@
+</p>
+<div class="container">
+    <h1>熱門城市</h1><br />
+                 <div class="row">
+                     @foreach (var item in Model)
+                     {
+                         <div class="card-deck col-3 mb-3">
+                             <div class=" card border-success">
+                                 <img class="card-img-top" src="~/images/IndexImages/@Html.DisplayFor(modelItem => item.Photo)" />
+                                 <div class="card-body text-white">
+                                     <h3 class="card-title">@Html.DisplayFor(modelItem => item.Nation)</h3>
+                                     <p class="card-text">@Html.DisplayFor(modelItem => item.City)</p>
+                                     <br />
+                                     <br />
+                                     <br />
+                                     <br />
+                                     <br />
+                                     <br />
+                                     <a class="btn btn-outline-danger btn-fw" asp-action="Details" asp-route-id="@item.Id">了解更多</a>
+                                 </div>
+                             </div>
+                         </div>
+                     }
+                 </div>
+        
+        @*<a class="btn btn-outline-primary btn-fw justify-content-lg-start" asp-action="Index" asp-controller="Home">回首頁</a>*@
+        <br />
+        <br />
+        <br />
+    </div>
+<br />
+<a class="btn btn-outline-success btn-fw justify-content-lg-start" id="excel" onclick="return confirm('確認下載?');" asp-action="GetExcel" asp-controller="Places">下載Excel檔</a>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+@section Styles{
+
+}
+
+
+@section Scripts{
+    <script>
+        @*$("#excel").click(function () {
+
+                var myData = {
+
+                };
+
+                $.ajax({
+                    type: 'GET',
+                    url: '@Url.Action("GetExcel")',
+                    data: myData,
+                    success: function (result) {
+                        $("#div1").html(`<h1>${result}</h1>`);
+
+                    }
+                });
+
+            });*@
+    </script>
+
+}

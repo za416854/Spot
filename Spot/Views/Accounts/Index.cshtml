@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Spot.Models.Account>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Accounts Management</h1>
+
+@*<a class="btn btn-primary btn-rounded btn-fw" asp-action="Index" asp-controller="Places">頁面資料管理</a>*@
+<p>
+    @*<a class="btn btn-facebook btn-rounded btn-fw" asp-action="Create">Create New</a>*@
+</p>
+<div class="container-fluid page-body-wrapper">
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="badge badge-outline-secondary" style="font-size: xx-large">Accounts Data table</h4><br /><br />
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table id="order-listing" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.UserName)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Password)
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.UserName)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Password)
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-dark" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-pencil"></i></a> |
+                                                        <a class="btn btn-dark" asp-action="Details" asp-route-id="@item.Id"><i class="ti-eye text-primary"></i></a> |
+                                                        <a class="btn btn-dark" asp-action="Delete" asp-route-id="@item.Id"><i class="ti-close text-danger"></i></a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main-panel ends -->
+</div>
+@section Styles{
+    <link href="~/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/vendors/datatables.net-bs4/dataTables.bootstrap4.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="~/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="~/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="~/js/data-table.js"></script>
+}

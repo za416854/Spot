@@ -1,0 +1,55 @@
+﻿@model Spot.Models.Account
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Account</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" id="form1">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" type="text" id="userName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="text" id="userPassword" class="form-control" />
+                <span  asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="button" id="create" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@section Styles{
+    <link href="~/css/sweetalert2.css" rel="stylesheet" />
+}
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/sweetalert2.js"></script>
+    <script>
+        $(function () {
+            $("#create").click(function () {
+                swal({
+                    title: '確認?',
+                    text: "檔案即將被新增!",
+                    type: 'warning',
+                    showCancelButton: true,
+                }).then(function () {
+                    setTimeout($("#form1").submit(), 3000);
+                })
+            })
+        })
+    </script>
+}
